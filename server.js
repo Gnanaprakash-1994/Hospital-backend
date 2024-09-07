@@ -14,7 +14,7 @@ app.use(cors())
 // MongoDB Connection: 
 mongoose.connect(process.env.MONGO_URI)
     .then(()=>{
-        app.listen(process.env.PORT||4000,()=>{
+        app.listen(process.env.PORT,()=>{
             console.log('DB Connected Successfully and Server started at Port '+ process.env.PORT) 
         })  
     }).catch(err => console.log(err) )
