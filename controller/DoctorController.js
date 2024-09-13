@@ -64,7 +64,7 @@ const deleteDoctor = async(req,res) => {
     }
 
     try { 
-        const delDoctor = await DoctorModel.findByIdAndD
+        const delDoctor = await DoctorModel.findByIdAndDelete(id)
         res.status(200).json({message: "Doctor Entry has been deleted"})
         
     } catch (e) {
